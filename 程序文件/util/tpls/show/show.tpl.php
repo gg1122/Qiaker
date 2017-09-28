@@ -1,5 +1,5 @@
 <?php include T('show','header');?>
-<div class="main layui-clear">
+<div class="main layui-clear">	
     <div class="wrap">
 		<div class="bdsharebuttonbox">
 		<a href="#" class="bds_tsina1 bds_ico" data-cmd="tsina" title="分享到新浪微博"></a>
@@ -12,25 +12,22 @@
             <div class="fly-panel detail-box">
                 <h1><?=$info['title']?></h1>
                 <div class="fly-tip fly-detail-hint">
-                    <div class="fly-list-hint">
-                        <a href="#comment"><i class="iconfont icon-icon3zanpinglunzhuanfaliulan01"></i> <?=$info['zan']?></a>
-                        <i class="iconfont icon-liulan"></i> <?=$info['view']?>
-						<?php if($_userid==$info['userid']){?>
-						<a href="/send.html?c=edit&id=<?=$id?>"><i class="layui-icon">&#xe642;</i>  编辑</a>
-						<?php }?>
-					</div>
+					<?php if($info['top']==1){?><span class="fly-tip-stick">置顶</span><?php }?><?php if($info['jing']==1){?><span class="fly-tip-jing">精帖</span><?php }?>
 				</div>
-				<div style="clear:both"></div>
 				<div class="detail-about">
                     <a class="jie-user" href="/user/<?=$info['userid']?>.html">
-                        <img src="<?=$user['face']?$user['face']:'/static/images/avater.png';?>" alt="">
-                        <cite><?=$user['username']?><em><?=date('Y年m月d日',$info['time'])?></em></cite>
+                        <img src="<?=$user['face']?$user['face']:'/static/images/avatar.svg';?>" alt="">
+                        <cite><?=$user['username']?> <em><?=formatTime($info['time'])?>发布  · <?=$info['view']?>人阅读  · <?=$info['pl']?>人评论</em></cite>
                     </a>
                     <div class="detail-hits" data-id="{{rows.id}}">
                         <span>共推荐过 <i style="color:#FF7200"><?=$tj?></i> 次产品</span>
+						<?php if($_userid==$info['userid']){?>
+						<span><a href="/send.html?c=edit&id=<?=$id?>"><i class="layui-icon">&#xe642;</i>  编辑</a></span>
+						<?php }?>
+						<span class="layui-btn layui-btn-mini jie-admin " <?php if(empty($old_fav)){?>onclick="fav(<?=$id?>)"<?php }?>>收藏</span>
                     </div>
-					
                 </div>
+				<div style="clear:both"></div>
                 <div class="detail-body">
                     <p><?=$info['dsp']?></p>
                 </div>
@@ -38,69 +35,45 @@
                     <?=$info['content']?>
                 </div>
 				<div class="p-content" >
-					<?php if(empty($old_zan)){?>
-					<a onclick="zan(<?=$id?>)" class="layui-btn layui-btn-normal"><i class="iconfont icon-icon3zanpinglunzhuanfaliulan01"></i></a>
-					<?php }else{?>
-					<a class="layui-btn layui-btn-normal" disabled><i class="iconfont icon-icon3zanpinglunzhuanfaliulan01"></i>  已赞</a>
-					<?php }?>
-					<?php if(empty($old_fav)){?>
-					<a onclick="fav(<?=$id?>)" class="layui-btn layui-btn-warm"><i class="layui-icon">&#xe600;</i> 收藏</a>
-					<?php }else{?>
-					<a class="layui-btn layui-btn-warm"><i class="layui-icon">&#xe60c;</i> 已收藏</a>
-					<?php }?>
+					<a <?php if(empty($old_zan)){?>onclick="zan(<?=$id?>)" <?php }?>class="layui-btn layui-btn-primary"><i class="iconfont icon-icon3zanpinglunzhuanfaliulan01"></i> <?=$zan_num?$zan_num:'';?></a>	
 					<?php if(!empty($info['url'])){?>
-					<a href="/url.html?id=<?=$id?>" target="_blank" class="layui-btn"><i class="layui-icon">&#xe64c;</i>  链接</a><?php }?><br/><br/>
+					<a href="/url.html?id=<?=$id?>" target="_blank" class="layui-btn layui-btn-primary" style="float:right"><i class="layui-icon">&#xe64c;</i>  直达链接</a><?php }?><br/>
 				</div>
-				<fieldset class="layui-elem-field layui-field-title site-title">
-					<legend><a name="get"><?=$zan_num?$zan_num:0;?>人觉得很赞</a></legend>
-				</fieldset>
 				<div class="zan_user">
 <?php foreach($all_zan as $k=>$v) {
 $this_user=$db->get_One('select * from `ucenter` where userid ='.$v['userid']);
 ?>
 					<a href="/user/<?=$v['userid']?>.html" title="<?=$this_user['username']?>">
 						<div class="zan_avater">
-							<img src="<?=$this_user['face']?$this_user['face']:'/static/images/avater.png';?>" alt="<?=$this_user['username']?>" />
+							<img src="<?=$this_user['face']?$this_user['face']:'/static/images/avatar.svg';?>" alt="<?=$this_user['username']?>" />
 						</div>
-						<span><?=$this_user['username']?></span>
 					</a>
 <?php }?>
 				</div>
 			</div>
+			<div class="fly-panel detail-box" style="padding-top: 10px;">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<ins class="adsbygoogle"
+					 style="display:block; text-align:center;"
+					 data-ad-format="fluid"
+					 data-ad-layout="in-article"
+					 data-ad-client="ca-pub-3138559351412474"
+					 data-ad-slot="5231018923"></ins>
+				<script>
+					 (adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
 			<a id="cmt"></a>
-            <div class="fly-panel">
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- 自适应仅图片 -->
-				<ins class="adsbygoogle"
-					 style="display:block"
-					 data-ad-client="ca-pub-3138559351412474"
-					 data-ad-slot="7857671329"
-					 data-ad-format="auto"></ins>
-				<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-            </div>
-            <div class="fly-panel">
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- 自适应仅图片 -->
-				<ins class="adsbygoogle"
-					 style="display:block"
-					 data-ad-client="ca-pub-3138559351412474"
-					 data-ad-slot="7857671329"
-					 data-ad-format="auto"></ins>
-				<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-            </div>
 			<div class="fly-panel detail-box" style="padding-top: 10px;">
 				<ul class="jieda photos" id="jieda">
 <?php if(!empty($comment)){foreach($comment as $k=>$v) {
 $who=$db->get_One('select * from `ucenter` where userid='.$v['userid']);
+$my_zan=$db->get_One('select * from `zan_log` where userid='.$v['userid'].' and infoid='.$v['id'].' and tp=3');
 ?>
 					<li>
 						<div class="detail-about detail-about-reply">
-							<a class="jie-user" href="">
-								<img src="<?=$who['face']?$who['face']:'/static/images/avater.png';?>" alt="<?=$who['username']?>" layer-index="0">
+							<a class="jie-user" href="/user/<?=$v['userid']?>.html">
+								<img src="<?=$who['face']?$who['face']:'/static/images/avatar.svg';?>" alt="<?=$who['username']?>" layer-index="0">
 								<cite><i><?=$who['username']?></i></cite>
 							</a>
 							<div class="detail-hits"><span><?=date('Y-m-d H:i',$v['time'])?></span></div>
@@ -108,11 +81,20 @@ $who=$db->get_One('select * from `ucenter` where userid='.$v['userid']);
 						<div class="detail-body jieda-body">
 							<?=$v['content']?>
 						</div>
+						<div class="jieda-reply">            
+							<span class="jieda-zan" <?php if(!empty($my_zan)){?> style="color:#007fff" <?php }else{?>onclick="zan_pl(<?=$v['id']?>)"<?php }?>>              
+								<i class="iconfont icon-icon3zanpinglunzhuanfaliulan01"></i> <em><?=$v['zan']?></em>           
+							</span>            
+							<!--<span type="reply">              
+								<i class="iconfont icon-feedback"></i> 回复
+							</span>-->                        
+						</div>
 					</li>
 <?php }}else{?>
-					<li class="fly-none">没有任何回复</li>
+					<li class="fly-none">还没有任何回复</li>
 <?php }?>
 				</ul>
+<?php if(!empty($_userid)){?>
 				<div class="layui-form layui-form-pane">
 					<form method="post">
 						<input type="hidden" name="c" value="comment"/>
@@ -127,27 +109,26 @@ $who=$db->get_One('select * from `ucenter` where userid='.$v['userid']);
 						</div>
 					</form>
 				</div>
+<?php }else{?>
+				<div class="layui-form layui-form-pane" style="clear:both;">
+					<div class="layui-form-item layui-form-text">
+						<div class="layui-input-block">
+							<div class="layui-textarea" style="line-height:80px;text-align:center;color:#8590a6">
+								登录后才可发表评论 | <a href="/login.html" style="color:#007fff">登录</a>
+							</div>
+						</div>
+					</div>
+                </div>
+<?php }?>
 			</div>
         </div>
     </div>
     <div class="edge">
-		<div class="fly-panel leifeng-rank">      
-			<h3 class="fly-panel-title">推荐榜 - TOP 12</h3>      
-			<dl> 
-<?php foreach($tj_user as $k=>$v) {
-$this_user=$db->get_One('select * from `ucenter` where userid ='.$v['userid']);
-?>
-				<dd>          
-					<a href="/user/<?=$v['userid']?>.html">            
-						<img src="<?=$this_user['face']?$this_user['face']:'/static/images/avater.png';?>">            
-						<cite><?=$this_user['username']?></cite>            
-						<i><?=$v['num']?>次推荐</i>          
-					</a>       
-				</dd> 
-<?php }?>
-			</dl>    
+		<div class="fly-panel add_new">
+			<a href="<?php if($_userid){?>/send.html<?php }else{?>/login.html<?php }?>"><i class="layui-icon">&#xe654;</i>    发布新话题</a>
 		</div>
         <div class="fly-panel">
+			<h3 class="fly-panel-title">赞助商为本站提供的内容</h3> 
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- 336 -->
 			<ins class="adsbygoogle"
@@ -158,20 +139,15 @@ $this_user=$db->get_One('select * from `ucenter` where userid ='.$v['userid']);
 			(adsbygoogle = window.adsbygoogle || []).push({});
 			</script>
         </div>
-        <div class="fly-panel">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<!-- 336 -->
-			<ins class="adsbygoogle"
-				 style="display:inline-block;width:336px;height:280px"
-				 data-ad-client="ca-pub-3138559351412474"
-				 data-ad-slot="3025517326"></ins>
-			<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-        </div>
-		<!--<div class="fly-panel fly-hezuo">      
-			<div style="height: 90px; line-height: 90px; text-align: center; background-color: #fff; color: #ccc; font-size: 16px; font-weight: 300; white-space: nowrap;">边栏广告位，联系QQ：290805404</div>    
-		</div>-->
+		<dl class="fly-panel fly-list-one">      
+			<dt class="fly-panel-title">最近热帖</dt> 
+<?php foreach($hot as $k=>$v) {?>
+			<dd>        
+				<a href="/product/<?=$v['id']?>.html"><?=$v['title']?></a>        
+				<span><i class="iconfont icon-liulan"></i><?=$v['view']?></span>      
+			</dd> 
+<?php }?>
+		</dl>
     </div>
 </div>
 <script type="text/javascript">
@@ -224,7 +200,25 @@ function zan(id){
 		}
 	});
 }
-
+function zan_pl(id){
+	<?php if(!$_userid){?>
+	layer.msg('您还没有登陆哦！');
+	return;
+	<?php }?>
+	$.ajax({
+		type:'post',
+		url:'/product/<?=$id?>.html?c=zanpl',
+		data:{'infoid':id},
+		success:function(r){
+			if(r=='ok'){
+				layer.msg('感谢支持！');
+			}else{
+				layer.msg(r);
+			}
+			setTimeout(function(){window.location.reload(true);},1200);
+		}
+	});
+}
 function fav(id){
 	<?php if(!$_userid){?>
 	layer.msg('您还没有登陆哦！');

@@ -2,6 +2,24 @@
 RewriteEngine On
 RewriteBase /
 
+RewriteCond %{HTTP_HOST} ^code\.qiaker\.cn$ [NC]
+RewriteCond %{REQUEST_URI} !^/code/
+RewriteRule ^(.*)$ code/$1?Rewrite [L,QSA]
+
+RewriteCond %{HTTP_HOST} ^gif\.qiaker\.cn$ [NC]
+RewriteCond %{REQUEST_URI} !^/gif/
+RewriteRule ^(.*)$ gif/$1?Rewrite [L,QSA]
+
+
+RewriteCond %{HTTP_HOST} ^app\.qiaker\.cn$ [NC]
+RewriteCond %{REQUEST_URI} !^/app/
+RewriteRule ^(.*)$ app/$1?Rewrite [L,QSA]
+
+RewriteCond %{HTTP_HOST} ^blog\.qiaker\.cn$ [NC]
+RewriteCond %{REQUEST_URI} !^/blog/
+RewriteRule ^(.*)$ blog/$1?Rewrite [L,QSA]
+
+
 RewriteRule ^product/([0-9]+).html$ ?m=wxsite&mod=show&id=$1 [QSA,L]
 RewriteRule ^list/([0-9]+).html$ ?m=wxsite&mod=list&id=$1 [QSA,L]
 RewriteRule ^([a-z]+).html$ ?m=wxsite&mod=$1 [QSA,L]

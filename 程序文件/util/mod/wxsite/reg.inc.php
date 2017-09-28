@@ -30,7 +30,13 @@ switch($c) {
 		$user=$db->get_One("select * from ucenter where username = '$user'"); 
 		if(empty($user)){ 
 			$db->query("INSERT INTO ucenter(username,password,email,regtime)VALUES('$username','$psw','$email','$regtime')");
-			exit('ok');  
+			$uid=$db->insert_id();
+			$_SESSION['userid']=$uid;
+			$_SESSION['username'] = $user;
+			$auth = Auth::encode($_SESSION['userid']."\t".$pass);
+			Cookie::set('Uin', $_SESSION['userid']);
+			Cookie::set('Uas', $auth);
+			exit('ok');
 		}else{  
 			exit('用户名已被使用！'); 
 		}  

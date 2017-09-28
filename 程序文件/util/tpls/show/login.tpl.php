@@ -33,12 +33,13 @@
 							</div>
 						</div>
 						<div class="layui-form-item">
-							<a class="layui-btn" lay-filter="login" lay-submit>立即登录</a>
+							<a class="layui-btn layui-btn-normal" lay-filter="login" lay-submit>立即登录</a>
 							<!--<span style="padding-left:20px;"><a href="/user/forget">忘记密码？</a></span>-->
 						</div>
 						<div class="layui-form-item fly-form-app">                
 							<span>或者使用社交账号登入</span>                
-							<a href="/qqlogin.html" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})" class="iconfont icon-qq" title="QQ登入"></a>            
+							<a href="/qqlogin.html" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})" class="iconfont icon-qq" title="QQ登入"></a>                 
+							<a href="/wblogin.html" onclick="layer.msg('正在通过新浪微博登入', {icon:16, shade: 0.1, time:0})" class="iconfont icon-weibo" title="新浪微博登入"></a>            
 						</div>
 					</form>
 					</div>

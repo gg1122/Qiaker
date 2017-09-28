@@ -1,6 +1,6 @@
 <?php
-$app_id = "****"; 
-$app_secret = "****"; 
+$app_id = "101406653"; 
+$app_secret = "62482470b0e1f21381c79b39970c539d"; 
 $my_url = "http://qiaker.cn/callback.html"; 
 
 session_start();

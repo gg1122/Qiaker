@@ -6,7 +6,7 @@ if(!isset($acts[$c])){
 }
 $title='登陆 - 恰客';
 $dsp="";
-$keywords="智能头条,人工智能,智能硬件,智能机器人,人工智能学习,无人驾驶,无人机,物联网,云计算";
+$keywords="";
 switch($c) {
 	case 'index':
 		include T('show','login');

@@ -74,7 +74,7 @@
 							</div>
 						</div>
 						<div class="layui-form-item">
-							<a class="layui-btn" key="set-mine" lay-filter="savepass" lay-submit>确认修改</a>
+							<a class="layui-btn" lay-filter="savepass" lay-submit>确认修改</a>
 						</div>
 					</form>
 				</div>

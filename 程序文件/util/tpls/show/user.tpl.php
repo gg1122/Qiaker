@@ -1,6 +1,9 @@
 <?php include T('show','header');?>
-<div class="fly-home" style="background-image: url();">
-	<img src="<?=$user['face']?$user['face']:'/static/images/avater.png';?>" alt="<?=$user['username']?>">
+<style type="text/css">
+.fly-home{background: url(/static/images/Sports.png);}
+</style>
+<div class="fly-home">
+	<img src="<?=$user['face']?$user['face']:'/static/images/avatar.svg';?>" alt="<?=$user['username']?>">
 	<h1><?=$user['username']?> <i class="iconfont icon-<?=$user['sex']=='男'?'nan':'nv';?>"></i></h1>
 	<p class="fly-home-info">
 		<i class="iconfont icon-shijian"></i>

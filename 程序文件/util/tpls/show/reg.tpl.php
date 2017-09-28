@@ -39,7 +39,13 @@
 							</div>
 						</div>
 						<div class="layui-form-item">
-							<a class="layui-btn" lay-filter="reg" lay-submit>立即注册</a>
+							<a class="layui-btn layui-btn-normal" lay-filter="reg" lay-submit>立即注册</a>
+						</div>
+						
+						<div class="layui-form-item fly-form-app">                
+							<span>或者使用社交账号登入</span>                
+							<a href="/qqlogin.html" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})" class="iconfont icon-qq" title="QQ登入"></a>                  
+							<a href="/wblogin.html" onclick="layer.msg('正在通过新浪微博登入', {icon:16, shade: 0.1, time:0})" class="iconfont icon-weibo" title="新浪微博登入"></a>  
 						</div>
 					</form>
 					</div>
@@ -54,9 +60,9 @@ layui.use('form', function(){
 	form.on('submit(reg)', function(data){
 	$.post('/reg.html',data.field,function(res){
 		if(res=='ok'){
-			layer.msg('注册成功，马上登录吧！');
+			layer.msg('注册成功！');
 			setTimeout(function(){
-				window.location.href="/login.html";
+				window.location.href="/";
 			},1000)
 		}else{
 			layer.msg(res);

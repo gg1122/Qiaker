@@ -4,7 +4,7 @@ $c=isset($_REQUEST['c'])?trim($_REQUEST['c']):'index';
 if(!isset($acts[$c])){
 	$c='index';
 }
-$title='推荐产品 - 恰客';
+$title='发布新话题 - 恰客';
 switch($c) {
 	case 'index':
 		$id=$_REQUEST['id']?$_REQUEST['id']:0;
@@ -18,11 +18,12 @@ switch($c) {
 		$infos['dsp']=trim($_POST['dsp']);
 		$infos['status']=1;
 		$infos['userid']=$_userid;
-		$infos['time']=TIME;
+		$infos['catid']=intval($_POST['catid']);			
 		$infos['content']=$_POST['content'];
 		if($id>0){
 			$db->update('main_info',$infos,'id='.$id);
 		}else{
+			$infos['time']=TIME;
 			$db->insert('main_info',$infos);
 		}
 		exit('ok');
