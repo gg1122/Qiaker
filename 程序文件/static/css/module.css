@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/* CSS Document */
+/*标签列表模块*/
+.tag-list-box  { border-bottom:1px solid #eeeeef; padding:0px 0 30px; margin-bottom:30px; vertical-align:middle; overflow:hidden;}
+.tag-list-box_pic a { display:block; width:230px; height:130px; overflow:hidden; }
+.tag-list-box_pic a img { width:100%;}
+.tag-list-box-text { display:table-cell; vertical-align:top; width:10000px; *width:auto; *zoom:1; padding-left:30px; }
+.tag-list-box-text h2 { color:#010101; font-size:18px; font-weight:bold; line-height:30px; }
+.tag-list-box-text h2 a { color:#010101; }
+.tag-list-box-author { color:#bbbbbb; padding:8px 0 10px; font-size:14px; line-height:23px;}
+.tag-list-box-author img { border-radius:20px; width:23px; height:23px; vertical-align:middle; margin-right:6px;}
+.tag-list-box-author span { padding: 0 18px; }
+.tag-list-box-author cite { color:#9ea1a4;}
+.tag-list-box-author a { white-space:nowrap; color:#bbbbbb; font-size:14px; height:18px; line-height:18px; padding-left:18px;  }
+.tag-list-box-author a:hover { color:#01afc4; }
+.tag-list-box-text p { color:#666464; font-size:14px; line-height:21px; height:42px; overflow:hidden;}
+.tag-list-box-text p a { color:#666464; }
+
+/*加载更多模块*/
+.loading-more { }
+.loading-more a { display:block; background-color:#fefefd; border:1px solid #efefef; text-align:center; height:50px; line-height:50px; color:#898989;}
+
+/*右侧banner模块*/
+.right-banner { width:340px;}
+.right-banner img {width: 100%;}
+
+/*左侧banner模块*/
+.left-banner { width:820px;}
+
+/*右侧标题模块*/
+.right-tit-box { background-color:#f5f4f4;}
+.right-tit-box h3 { border-left:6px solid #01afc4; padding-left:12px; font-size:20px; font-weight:bold; line-height:24px; color:#000;}
+
+/*右侧 资讯/热点头条 内容列表模块*/
+.right-news-ul { padding:15px 15px 15px 18px;}
+.right-news-ul p { font-size:14px; color:#898989; height:30px; line-height:30px; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
+.right-news-ul p a { color:#898989; }
+.right-news-ul p a:hover { color:#01afc4; }
+
+/*右侧标签模块*/
+.right-tag-box { padding:15px 0 0 18px;}
+.right-tag-box li { float:left; width:102px; height:48px; margin:0 2px 3px 0; }
+.right-tag-box li a { display:block; width:102px; height:48px; line-height:48px; text-align:center; font-size:14px; color:#2272b4; font-weight:bold; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#CCFFFFFF', endColorstr='#CCFFFFFF'); background:rgba(255,255,255,0.8);}
+.right-tag-box li a:hover { font-weight:bold; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#99FFFFFF', endColorstr='#99FFFFFF'); background:rgba(255,255,255,0.6);}
+.right-tag-box li a.current { color:#fff; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#00FFFFFF', endColorstr='#00FFFFFF'); background:rgba(255,255,255,0); }
+
+
+.right-tag-box li.li-01 { background-position:0px 0px;}
+.right-tag-box li.li-02 { background-position:-104px 0px;}
+.right-tag-box li.li-03 { background-position:-208px 0px;}
+.right-tag-box li.li-04 { background-position:0px -51px;}
+.right-tag-box li.li-05 { background-position:-104px -51px;}
+.right-tag-box li.li-06 { background-position:-208px -51px;}
+
+.category-tag-bg { background:url(../images/module/tag-bg-category.jpg) no-repeat -999px -999px;}/*类目标签背景*/
+.field-tag-bg { background:url(../images/module/tag-bg-field.jpg) no-repeat -999px -999px;}/*领域标签背景*/
+
+
+
+/*右侧网商大学介绍*/
+.wsdx-info-box { background-color:#f5f4f4; padding-bottom:30px}
+.wsdx-info-box h3 { background:url(../images/module/ganhuo-wsdx-logo.jpg) no-repeat left top; width:340px; height:119px; }
+.wsdx-info-box h3 a { display:block; width:340px; height:99px; }
+.wsdx-info-box p { padding:0px 16px; text-indent:2em; color:#898989; font-size:14px; line-height:30px; }
+
+/*左侧文章*/
+.article-head { border-bottom:1px solid #dbdbdb;}
+.article-head h2 { font-size:36px; line-height:48px; color:#010101;}
+.article-head p { font-size:14px; color:#898989; padding:20px 0 13px;}
+.article-tag { float:left; padding-top:5px; }
+.article-tag span { float:left; padding-right:5px; line-height:20px;}
+.article-tag a { float:left; white-space:nowrap; display:block; background-color:#4aabf0; border-radius:2px; color:#fff; height: 19px; line-height:19px; padding:0 5px; margin-right:10px;}
+.article-share { float:right; text-align:right; margin-right:-6px; }
+.article-share span { float:left; padding-right:5px; line-height:30px;}
+.article-share a { float:left; display:block; width:30px; height:30px;line-height:0;font-size:0;overflow:hidden; background:url(../images/module/icon-share-detail.jpg) no-repeat -999em -999em; margin-right:10px;}
+.article-share a.share-icon-weibo { background-position:0px 0px;}
+.article-share a.share-icon-qq { background-position:-40px 0px;}
+.article-share a.share-icon-weixin { background-position:-80px 0px;}
+
+.article-cont { margin-top:50px; max-width:820px;}
+.article-cont p { font-size:16px; color:#333; line-height:30px; padding:15px 0;}
+.article-cont strong { font-weight:bold;}
+.article-cont img { max-width:100%; text-align:center;}
+.article-cont-img { text-align:center; max-width:820px; overflow:hidden;}
+.article-cont-img img { max-width:100%;}
+
+.article-cont p.article-cont-em { font-size:20px; color:#01afc4;}
+
+.article-cont-bg { background-color:#f6f6f6; border-radius:3px; padding:13px 30px; font-size:14px; color:#4a4a4a; line-height:30px; margin:15px 0;}
+.article-cont-bg em { font-weight:bold; color:#000; }
+
+.article-cont-em-bg { padding:20px 50px; }
+.article-cont-em-bg p { font-size:14px; color:#4a4a4a; }
+
+/*.article-comment-bg { margin-bottom:23px; border:1px solid #f0f0f0; background-color:#fafafa;}
+.article-comment-bg .login-prompt { height:140px; line-height:136px;  text-align:center; font-size:20px; color:#bbb;}
+.article-comment-bg .login-prompt a { color:#000;}
+
+.article-comment { margin-bottom:23px; }
+.article-comment textarea { width:100%;border:1px solid #dcdcdc; background-color:#fff; padding:10px; min-height:130px; box-sizing:border-box;  }
+.article-comment textarea:focus { outline:none;}
+
+.article-comment-btn {  }
+.article-comment-btn a { display:inline-block; background-color:#4faced; font-size:20px; color:#fff; padding:0px 60px; height:48px; line-height:48px;  }
+
+.article-comment-new { border-bottom:1px solid #efefef; padding:30px 0; }
+.article-comment-new p { font-size:14px; color:#212121; line-height:24px; padding:20px 0 15px;}
+.article-comment-img { width:52px; height:52px; overflow:hidden}
+.article-comment-img img { width:100%;}
+.article-comment-name { font-size:14px; color:#4faced; line-height:52px; padding-left:20px;}
+.article-comment-name a { color:#4faced; }
+.article-comment-time { font-size:14px; color:#bbbbbb; line-height:52px;}
+.article-comment-time span { padding-left:15px;}
+
+.article-comment-to { font-size:14px; color:#bbbbbb; }
+.article-comment-other { background-color:#fafafa; border:1px solid #efefef; padding:25px 35px 10px; }
+.article-comment-other-name { font-size:14px; color:#4faced;}
+.article-comment-other p {}*/
+
+/* 左侧标题模块*/
+.left-tit-box { border-bottom:1px solid #dbdbdb;}
+.left-tit-box h3 { display:inline-block; margin-bottom:-1px; border-bottom:2px solid #01afc4; font-size:20px; font-weight:bold; line-height:36px; color:#000;}
+
+/* 左侧标题模块2*/
+.left-tit-box2 { background-color:#fafafa; height:60px;}
+.left-tit-box2 h3 { font-size:20px; font-weight:bold; line-height:60px; color:#000; padding-left:10px;}
+
+/* 相关阅读内容模块*/
+.reading-cont { padding-top:35px;}
+.reading-cont ul { margin-left:-45px; width:855px;}
+.reading-cont li { float:left; width:230px; margin-left:55px;}
+.reading-cont-img {  width:230px; height:130px; overflow:hidden;}
+.reading-cont-img img { width:100%;}
+.reading-cont li p { font-size:14px; color:#212121; line-height:20px; padding-top:8px;}
+.reading-cont li p a { color:#212121; }
+
+/*关于我们左边菜单栏模块*/
+.about-left-menu-k { border:1px solid #dbdbdb; background-color:#fff; padding:30px 0;}
+.about-left-menu-k a { display:block; height:50px; line-height:50px; padding-left:30px; font-size:16px; color:#898989; }
+.about-left-menu-k a i { font-size:12px; color:#01afc4; padding-right:13px; }
+.about-left-menu-k a.current,.about-left-menu-k a:hover { background-color:#f5f5f5; color:#01afc4; }
+
+/*关于我们右边模块*/
+.about-right-k { border:1px solid #dbdbdb; background-color:#fff; padding:30px 80px;}
+.about-right-k h2 { border-bottom:1px solid #dbdbdb; font-size:24px; color:#000; padding:10px 0 20px; }
+
+
+.article-comment-bg { margin-bottom:23px; border:1px solid #f0f0f0; background-color:#fafafa;}
+.article-comment-bg .login-prompt { height:140px; line-height:136px;  text-align:center; font-size:20px; color:#bbb;}
+.article-comment-bg .login-prompt a { color:#000;}
+
+.article-comment { margin-bottom:23px; }
+.article-comment textarea { width:100%;border:1px solid #dcdcdc; background-color:#fff; padding:10px; min-height:130px; box-sizing:border-box;  }
+.article-comment textarea:focus { outline:none;}
+
+.article-comment-btn {  }
+.article-comment-btn button { display:inline-block; background-color:#4faced; font-size:20px; color:#fff; padding:0px 60px; height:48px; line-height:48px;     border: none; }
+
+.article-comment-new { border-bottom:1px solid #efefef; padding:30px 0; }
+.article-comment-new p { font-size:14px; color:#212121; line-height:24px; padding:20px 0 15px;}
+.article-comment-img { width:52px; height:52px; overflow:hidden}
+.article-comment-img img { width:100%;}
+.article-comment-name { font-size:14px; color:#4faced; line-height:52px; padding-left:20px;}
+.article-comment-name a { color:#4faced; }
+.article-comment-time { font-size:14px; color:#bbbbbb; line-height:52px;}
+.article-comment-time span { padding-left:15px;}
+
+.article-comment-to { font-size:14px; color:#bbbbbb; }
+.article-comment-other { background-color:#fafafa; border:1px solid #efefef; padding:25px 35px 10px; }
+.article-comment-other-name { font-size:14px; color:#4faced;}
+.article-comment-other p {}
+
+/*
+**评论功能布局调整
+**2016-10-10
+*/
+.comment-wrap { margin: 0 auto; width: 820px; }
+.comment-wrap .article-comment-new { padding: 30px 0 20px 0; }
+.comment-wrap .article-comment-to { padding-bottom: 10px; text-align: right; }
+.subcomment { border-bottom: 1px solid #efefef;}
+.subcomment .article-comment-other { border-bottom: none; }
+.subcomment cite { padding: 0 5px; color: #666; }
+.subcomment-button .article-comment-btn { text-align: center; }
+.subcomment .subname { float: left; }
+.subcomment .subbtn { float: right; cursor: pointer; }
+.article-comment-new:last-of-type{
+	border-bottom:none;
+}
+.subcomment-button{display: none;}

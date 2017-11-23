@@ -24,8 +24,11 @@ switch($c) {
 		$tj=$db->findOne('select count(*) from `main_info` where userid='.$info['userid']);
 		$comment=$db->getAll('select * from `main_comment` where infoid='.$id.' order by time asc');
 		$tj_user=$db->getAll('select count(*) as num,userid from `main_info` group by userid order by num desc limit 12');
-		
-		include T('show','show');
+		if($_GET['t']==1){		
+			include T('show','show');
+		}else{
+			include T('show','view');
+		}
 		break;
 	case 'comment':
 		if(empty($_userid)){

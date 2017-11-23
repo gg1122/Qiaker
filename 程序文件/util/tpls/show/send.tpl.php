@@ -1,4 +1,4 @@
-<?php include T('show','header');?>  
+<?php include T('show','new_header');?>  
 <div class="main layui-clear">
 	<div class="fly-panel" pad20 style="margin-top: 20px;">
 		<div class="layui-form">
@@ -30,12 +30,12 @@
 									</select>
 								</div>
 							</div>
-							<!--<div class="layui-form-item layui-form-text">
-								<label class="layui-form-label">描述</label>
+							<div class="layui-form-item layui-form-text">
+								<label class="layui-form-label">简述</label>
 								<div class="layui-input-block">
 									<textarea name="dsp"  placeholder="一句话描述下该主题" class="layui-textarea fly-editor" style="height: 50px;"><?=$info['dsp']?></textarea>
 								</div>
-							</div>-->
+							</div>
 							<div class="layui-form-item layui-form-text">
 								<label class="layui-form-label">详情</label>
 								<div class="layui-input-block">
@@ -95,4 +95,4 @@ $('#sendbtn').click(function(){
 	
 });
 </script>
-<?php include T('show','footer');?>
+<?php include T('show','new_footer');?>

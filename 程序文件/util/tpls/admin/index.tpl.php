@@ -1,4 +1,4 @@
-<?php include T('show','header');?>
+<?php include T('show','new_header');?>
 <div class="fly-home" style="background-image: url('/static/images/Sports.png');">
 	<img src="<?=$uc['face']?$uc['face']:'/static/images/avater.png';?>" alt="<?=$_username?>">
 	<h1><?=$_username?> <i class="iconfont icon-<?=$uc['sex']=='男'?'nan':'nv';?>"></i></h1>
@@ -27,4 +27,4 @@
 		</div>
 	</div>
 </div>
-<?php include T('show','footer');?>
+<?php include T('show','new_footer');?>

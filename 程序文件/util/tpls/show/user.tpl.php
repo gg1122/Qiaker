@@ -1,4 +1,4 @@
-<?php include T('show','header');?>
+<?php include T('show','new_header');?>
 <style type="text/css">
 .fly-home{background: url(/static/images/Sports.png);}
 </style>
@@ -26,4 +26,4 @@
 		</div>
 	</div>
 </div>
-<?php include T('show','footer');?>
+<?php include T('show','new_footer');?>

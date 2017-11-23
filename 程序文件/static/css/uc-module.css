@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/* 个人中心模块样式 */
+
+/*个人中心左边菜单栏模块*/
+.uc-left-menu-k { border:1px solid #dbdbdb; background-color:#fff; padding:20px 0 30px;}
+.uc-left-menu-k h2 { border-bottom:1px solid #db0b2e; padding:1px 0 15px 38px; font-size:16px;  color:#000; margin-bottom:10px; }
+.uc-left-menu-k a { display:block; height:45px; line-height:45px; padding-left:23px; font-size:14px; color:#898989; }
+.uc-left-menu-k a i { font-size:10px; color:#db0b2e; padding-right:6px; }
+.uc-left-menu-k a.current,.uc-left-menu-k a:hover { color:#db0b2e; }
+.uc-left-menu-k a:hover { background-color:#f5f5f5;}
+
+/*个人中心右边框模块*/
+.uc-right-k { border:1px solid #dbdbdb; background-color:#fff; padding:0 0 80px;}
+.uc-right-k h2 { background-color:#fafafa; font-size:16px; color:#4a4a4a; padding:12px 0 11px 22px; }
+
+/*个人中心右边－个人资料模块*/
+.uc-person-info { margin:45px 68px 40px; }
+.uc-person-info-img { display:table-cell; vertical-align:top; }
+.uc-person-info-img a { display:block; width:116px; height:116px; margin-right:15px; border-radius:80px; overflow:hidden; position:relative; }
+.uc-person-info-img a img { width:100%;}
+.uc-person-info-img a span.span-hover { position:absolute; top:0px; left:0px; display:none; width:116px; height:116px; font-size:14px; text-align:center; color:#fff; line-height:116px; border-radius:80px; background:rgba(0,0,0,0.5); overflow:hidden; }
+
+
+
+.uc-person-info-text { display:table-cell; width:10000px; }
+.uc-person-info-text h3 { font-size:20px; line-height:30px; color:#333; padding-bottom:5px; padding-left:6px;}
+.uc-person-info-text p { font-size:14px; color:#898989; line-height:24px;}
+
+.uc-person-info-text input { border:1px solid #fff; width:50px; padding:5px;}
+.uc-person-info-text textarea { border:1px solid #fff; width:709px; padding:5px;font-size:14px; color:#898989; line-height:24px;}
+.uc-person-info-text input:focus { border: 1px solid #e4e4e4; outline:none;}
+.uc-person-info-text textarea:focus { border: 1px solid #e4e4e4; outline:none;}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #898989;  
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #898989;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #898989;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #898989;
+}
+
+
+
+
+/*个人中心右边－表单模块*/
+.uc-form-wrap-line-none { padding:40px 0 0 85px; margin:0px 68px;}
+
+.uc-form-wrap-line { padding:40px 0 0 85px; border-top:1px solid #dfdfdf; margin:0px 68px;}
+.uc-form-wrap { }
+.uc-form-wrap p { padding-bottom:10px; overflow:hidden;}
+.uc-form-wrap label { float:left; width:71px; text-align:right; padding-right:4px; font-size:14px; color:#898989; height:40px; line-height:40px; }
+.uc-form-wrap input { float:left; width:258px; border:1px solid #e0e0e0; height:36px; line-height:36px; padding:0 5px; outline:none; }
+.uc-form-wrap select { float:left; width:268px; border:1px solid #e0e0e0; height:36px; line-height:36px;  outline:none; }
+.uc-form-wrap input.btn-form-submit{ width:270px; border:none; padding:0; margin-top:7px; }
+.btn-form-submit { width:270px; text-align:center; background-color:#db0b2e; height:38px; line-height:38px; font-size:16px; color:#fff;  letter-spacing:6px; border:none;}
+
+/*个人中心右边－标题模块*/
+.uc-right-tit-wrap { border-bottom:1px solid #dfdfdf; margin:0px 68px 25px;}
+.uc-right-tit-wrap li { float:left; padding:0 10px; margin-right:20px; font-size:14px; padding-bottom:6px;}
+.uc-right-tit-wrap li a { color:#000;}
+.uc-right-tit-wrap li.current { border-bottom:1px solid #db0b2e; margin-bottom:-1px;}
+.uc-right-tit-wrap li.current a { color: #db0b2e;}
+
+/*个人中心右边－投稿文章列表模块*/
+.uc-article-list { margin:0 80px;}
+.uc-article-list li { border-bottom:1px dashed #d9d9d9; font-size:14px; color:#898989; height:47px; line-height:47px;  }
+.uc-article-list li h3 { float:left; width:605px; padding-left:4px;}
+.uc-article-list li h3 a { color:#898989;}
+.uc-article-list li:hover,
+.uc-article-list li h3 a:hover,
+.uc-article-list li:hover h3 a {  color:#db0b2e;  }
+
+.uc-article-list li span { float:left; width:140px; padding-left:4px;}
+.uc-article-list li em { float:left; width:70px; padding-right:4px; text-align:right;}
+
+.js-tab-cont-uc { display:none;}
+
+/*个人中心右边－评论列表模块*/
+.uc-comment-tit { border-bottom:1px solid #dfdfdf; margin:0px 68px 15px;}
+.uc-comment-tit li { float:left; text-align:center; font-size:14px; padding-bottom:6px;}
+
+.uc-comment-tit li.w-time { width:145px;}
+.uc-comment-tit li.w-tit { width:300px;}
+.uc-comment-tit li.w-cont { width:300px;}
+.uc-comment-tit li.w-operation { width:107px;}
+.uc-comment-tit li.w-collection-tit { width:600px;}
+
+
+
+
+
+.uc-comment-list { margin:0 80px;}
+.uc-comment-list li { border-bottom:1px dashed #d9d9d9; font-size:14px; color:#898989; height:60px;   }
+.uc-comment-list li h3 { float:left; width:250px; height:36px; line-height:18px; overflow:hidden; padding:12px 0px 0px 4px;}
+.uc-comment-list li h3 a { color:#898989;}
+.uc-comment-list li:hover,
+.uc-comment-list li h3 a:hover,
+.uc-comment-list li:hover h3 a {  color:#db0b2e;  }
+.uc-comment-list li p { float:left; width:250px; height:36px; line-height:18px; overflow:hidden;  padding:12px 0px 0px 50px;}
+
+.uc-collection-list li h3 { float:left; width:550px; height:60px; line-height:60px; white-space:nowrap; text-overflow: ellipsis; overflow:hidden; padding:0px 0px 0px 4px;}
+
+
+.uc-comment-list li span { float:left; width:160px; padding-left:4px; line-height:60px;}
+.uc-comment-list li em { float:left; width:70px; padding-left:35px; text-align:center; line-height:60px; color:#1c71b6; }
+.uc-comment-list li em a {  color:#1c71b6; }
+
+.uc-right-k .list-page { padding:50px 0 0px;}
+
+/*个人中心右边－数字模块*/
+.uc-right-num-box { padding:50px 0 70px; width:660px; margin:0 auto;}
+.uc-right-num-box li { float:left; border-right:1px solid #f3f3f1; width:164px; text-align:center; height:62px; color:#6d6d6d;}
+.uc-right-num-box li.last { border-right:none; }
+.uc-right-num-box li em { display:block; font-style:normal; font-size:30px; padding:3px 0 5px;}
+.uc-right-num-box li span { display:block; font-style:normal; font-size:12px;}
+
+
+/*个人中心右边－表单模块-投稿*/
+.uc-form-contribute { margin:5px 68px; }
+
+.uc-form-contribute .uc-form-wrap label { width:52px; }
+.uc-form-contribute .uc-form-wrap input {  width:715px;}
+.uc-form-contribute .uc-form-wrap textarea { float:left; width:715px; padding:5px; border:1px solid #e0e0e0; line-height:24px;  outline:none; }
+.uc-form-contribute .uc-form-wrap input.btn-form-submit { width:270px; margin-top:10px;}

@@ -1,4 +1,4 @@
-<?php include T('show','header');?>
+<?php include T('show','new_header');?>
 <div class="main fly-user-main layui-clear">
 	<?php include T('admin','left');?>
 	<div class="site-tree-mobile layui-hide">
@@ -97,4 +97,4 @@ function tj(id){
 }
 </script>
 
-<?php include T('show','footer');?>
+<?php include T('show','new_footer');?>

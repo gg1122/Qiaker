@@ -1,4 +1,4 @@
-<?php include T('show','header');?>  
+<?php include T('show','new_header');?>  
 <div class="main layui-clear">
 	<div class="fly-panel fly-panel-user" pad20>
 		<div class="layui-tab layui-tab-brief" lay-filter="user">
@@ -92,4 +92,4 @@ form.verify({
 }); 
 });  
 </script>
-<?php include T('show','footer');?>
+<?php include T('show','new_footer');?>

@@ -8,4 +8,7 @@
 	<li class="layui-nav-item <?=$a=='system'?'layui-this':'';?>">
 		<a href="/?m=admin&a=system"><i class="layui-icon">&#xe620;</i>基本设置</a>
 	</li>
+	<li class="layui-nav-item">
+		<a href="/logout.html"><i class="layui-icon">&#xe628;</i>退出登录</a>
+	</li>
 </ul>

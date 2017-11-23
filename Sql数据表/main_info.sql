@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50173
 File Encoding         : 65001
 
-Date: 2017-07-05 10:04:03
+Date: 2017-11-23 17:31:11
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -21,6 +21,7 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS `main_info`;
 CREATE TABLE `main_info` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `catid` int(11) DEFAULT '0',
   `title` varchar(255) CHARACTER SET utf8 NOT NULL,
   `dsp` varchar(255) CHARACTER SET utf8 NOT NULL,
   `url` varchar(255) NOT NULL,
@@ -30,5 +31,8 @@ CREATE TABLE `main_info` (
   `view` int(11) NOT NULL DEFAULT '0',
   `zan` int(11) NOT NULL DEFAULT '0',
   `time` int(11) NOT NULL,
+  `top` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否置顶',
+  `jing` tinyint(4) NOT NULL DEFAULT '0' COMMENT '精贴',
+  `pl` int(11) NOT NULL DEFAULT '0' COMMENT '评论数',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=160 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=1024 DEFAULT CHARSET=gbk;
