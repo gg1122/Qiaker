@@ -1,9 +1,9 @@
 <?php
 //数据库配置信息
-define('DB_HOST', 'bdm240661320.my3w.com'); //数据库服务器主机地址
-define('DB_USER', 'bdm240661320'); //数据库帐号
-define('DB_PW', '669966qQ'); //数据库密码
-define('DB_NAME', 'bdm240661320_db'); //数据库名
+define('DB_HOST', '******'); //数据库服务器主机地址
+define('DB_USER', '******'); //数据库帐号
+define('DB_PW', '******'); //数据库密码
+define('DB_NAME', '******'); //数据库名
 define('DB_CHARSET', 'UTF8'); //数据库字符集
 define('DB_PCONNECT', 0); //0 或1，是否使用持久连接
 define('DB_DATABASE', 'mysql'); //数据库类型
